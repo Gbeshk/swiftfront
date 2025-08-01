@@ -13,7 +13,7 @@ export function VerifyForm() {
   useEffect(() => {
     const verifyEmail = async () => {
       try {
-        const response = await fetch("http://localhost:3001/auth/verify", {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/auth/verify`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
